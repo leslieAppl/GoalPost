@@ -24,6 +24,7 @@
 		CE5C5FE62345EA8E00551D7F /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C5FE52345EA8E00551D7F /* UIViewControllerExt.swift */; };
 		CE5C5FE82345EB3C00551D7F /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C5FE72345EB3C00551D7F /* UIViewExt.swift */; };
 		CE5C5FEA2345ECA300551D7F /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C5FE92345ECA300551D7F /* UIButtonExt.swift */; };
+		CE5C5FEC2345F1B600551D7F /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C5FEB2345F1B600551D7F /* FinishGoalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CE5C5FE52345EA8E00551D7F /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		CE5C5FE72345EB3C00551D7F /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		CE5C5FE92345ECA300551D7F /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		CE5C5FEB2345F1B600551D7F /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				CE4911EE234597B100118CA7 /* GoalsVC.swift */,
 				CE5C5FE32345E8CB00551D7F /* CreateGoalVC.swift */,
+				CE5C5FEB2345F1B600551D7F /* FinishGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				CE5C5FEA2345ECA300551D7F /* UIButtonExt.swift in Sources */,
 				CE4911EB234597B100118CA7 /* AppDelegate.swift in Sources */,
 				CE4911F5234597B100118CA7 /* GoalPost.xcdatamodeld in Sources */,
+				CE5C5FEC2345F1B600551D7F /* FinishGoalVC.swift in Sources */,
 				CE5C5FE42345E8CB00551D7F /* CreateGoalVC.swift in Sources */,
 				CE4A455D2345A58E008BBD41 /* GoalCell.swift in Sources */,
 				CE4A456B2345B4AB008BBD41 /* GoalType.swift in Sources */,
