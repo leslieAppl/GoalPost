@@ -14,6 +14,10 @@
 		CE4911F5234597B100118CA7 /* GoalPost.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE4911F3234597B100118CA7 /* GoalPost.xcdatamodeld */; };
 		CE4911F7234597B200118CA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4911F6234597B200118CA7 /* Assets.xcassets */; };
 		CE4911FA234597B200118CA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4911F8234597B200118CA7 /* LaunchScreen.storyboard */; };
+		CE4A455D2345A58E008BBD41 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A455C2345A58E008BBD41 /* GoalCell.swift */; };
+		CE4A455F2345A6F9008BBD41 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A455E2345A6F9008BBD41 /* GoalType.swift */; };
+		CE4A45682345ABC4008BBD41 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A45662345ABC4008BBD41 /* Goal+CoreDataClass.swift */; };
+		CE4A45692345ABC4008BBD41 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A45672345ABC4008BBD41 /* Goal+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		CE4911F6234597B200118CA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4911F9234597B200118CA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE4911FB234597B200118CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4A455C2345A58E008BBD41 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		CE4A455E2345A6F9008BBD41 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		CE4A45662345ABC4008BBD41 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE4A45672345ABC4008BBD41 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,8 @@
 				CE4911F8234597B200118CA7 /* LaunchScreen.storyboard */,
 				CE4911FB234597B200118CA7 /* Info.plist */,
 				CE4911F3234597B100118CA7 /* GoalPost.xcdatamodeld */,
+				CE4A45662345ABC4008BBD41 /* Goal+CoreDataClass.swift */,
+				CE4A45672345ABC4008BBD41 /* Goal+CoreDataProperties.swift */,
 			);
 			path = GoalPost;
 			sourceTree = "<group>";
@@ -84,6 +94,7 @@
 		CE491202234597E300118CA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE4A455C2345A58E008BBD41 /* GoalCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,6 +102,7 @@
 		CE491203234597FC00118CA7 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				CE4A455E2345A6F9008BBD41 /* GoalType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -174,8 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4911EF234597B100118CA7 /* GoalsVC.swift in Sources */,
+				CE4A45682345ABC4008BBD41 /* Goal+CoreDataClass.swift in Sources */,
 				CE4911EB234597B100118CA7 /* AppDelegate.swift in Sources */,
+				CE4A455F2345A6F9008BBD41 /* GoalType.swift in Sources */,
 				CE4911F5234597B100118CA7 /* GoalPost.xcdatamodeld in Sources */,
+				CE4A455D2345A58E008BBD41 /* GoalCell.swift in Sources */,
+				CE4A45692345ABC4008BBD41 /* Goal+CoreDataProperties.swift in Sources */,
 				CE4911ED234597B100118CA7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
