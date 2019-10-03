@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Goal {
+class GoalTest {
     
-    var goalDesc: String = ""
-    var goalType: String = ""
-    var goalProgress: Int32 = 0
+    var goalDesc: String?
+    var goalType: String?
+    var goalProgress: Int32?
 }

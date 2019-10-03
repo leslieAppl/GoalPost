@@ -23,14 +23,19 @@ class GoalsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        // test lines
-        tableView.isHidden = false
-        let goal = Goal()
-        goal.goalDesc = "Eat Apple every day"
-        goal.goalType = GoalType.longTerm.rawValue
-        goal.goalProgress = Int32(10)
+        if goals.count > 0 {
+            tableView.isHidden = false
+            
+        }
         
-        self.goals.append(goal)
+        // test lines
+//        tableView.isHidden = false
+//        let goal = GoalTest()
+//        goal.goalDesc = "Eat Apple every day"
+//        goal.goalType = GoalType.longTerm.rawValue
+//        goal.goalProgress = Int32(10)
+//
+//        self.goals.append(goal)
     }
 
     @IBAction func addGoalBtn(_ sender: Any) {
