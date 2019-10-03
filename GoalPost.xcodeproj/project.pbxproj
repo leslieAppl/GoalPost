@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE4911EB234597B100118CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4911EA234597B100118CA7 /* AppDelegate.swift */; };
 		CE4911ED234597B100118CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4911EC234597B100118CA7 /* SceneDelegate.swift */; };
-		CE4911EF234597B100118CA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4911EE234597B100118CA7 /* ViewController.swift */; };
+		CE4911EF234597B100118CA7 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4911EE234597B100118CA7 /* GoalsVC.swift */; };
 		CE4911F2234597B100118CA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4911F0234597B100118CA7 /* Main.storyboard */; };
 		CE4911F5234597B100118CA7 /* GoalPost.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE4911F3234597B100118CA7 /* GoalPost.xcdatamodeld */; };
 		CE4911F7234597B200118CA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4911F6234597B200118CA7 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		CE4911E7234597B100118CA7 /* GoalPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4911EA234597B100118CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4911EC234597B100118CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE4911EE234597B100118CA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE4911EE234597B100118CA7 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		CE4911F1234597B100118CA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE4911F4234597B100118CA7 /* GoalPost.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoalPost.xcdatamodel; sourceTree = "<group>"; };
 		CE4911F6234597B200118CA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		CE491201234597D300118CA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE4911EE234597B100118CA7 /* ViewController.swift */,
+				CE4911EE234597B100118CA7 /* GoalsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4911EF234597B100118CA7 /* ViewController.swift in Sources */,
+				CE4911EF234597B100118CA7 /* GoalsVC.swift in Sources */,
 				CE4911EB234597B100118CA7 /* AppDelegate.swift in Sources */,
 				CE4911F5234597B100118CA7 /* GoalPost.xcdatamodeld in Sources */,
 				CE4911ED234597B100118CA7 /* SceneDelegate.swift in Sources */,
