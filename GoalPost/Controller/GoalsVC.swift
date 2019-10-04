@@ -21,31 +21,30 @@ class GoalsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        // Fetch Core Data + Update TableView
+        updateTableView()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTableView), name: NOTIF_TABLE_VIEW_UPDATED, object: nil)
+    }
+    
+    func fetchCoreData(completion: (_ completed: Bool) -> ()) {
         // Fetch Core Data
         let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
         goalsForTableView = try! PersistenceServer.context.fetch(fetchRequest)
-        
         print("-> GoalsVC.viewDidLoad.goalsForTableView: \(goalsForTableView.count)")
-        if goalsForTableView.count > 0 {
-            self.tableView.isHidden = false
-            self.tableView.reloadData()
-        } else { self.tableView.isHidden = true }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(updateTableView), name: NOTIF_TABLE_VIEW_UPDATED, object: nil)
+        completion(true)
     }
     
     @objc func updateTableView() {
         // Fetch Core Data
-               let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
-               goalsForTableView = try! PersistenceServer.context.fetch(fetchRequest)
-               
-               print("-> GoalsVC.viewDidLoad.goalsForTableView: \(goalsForTableView.count)")
-               if goalsForTableView.count > 0 {
-                   self.tableView.isHidden = false
-                   self.tableView.reloadData()
-               } else { self.tableView.isHidden = true }
-        
-        self.tableView.reloadData()
+        self.fetchCoreData { (completed) in
+            if completed {
+                if goalsForTableView.count > 0 {
+                    self.tableView.isHidden = false
+                } else { self.tableView.isHidden = true }
+            }
+            self.tableView.reloadData()
+        }
     }
 
     @IBAction func addGoalBtn(_ sender: Any) {
