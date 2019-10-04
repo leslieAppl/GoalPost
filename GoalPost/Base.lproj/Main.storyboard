@@ -376,59 +376,59 @@
                                 <color key="textColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Qe-9O-GKI">
-                                <rect key="frame" x="157" y="195" width="100" height="83.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="ca7-Ef-Bzx"/>
-                                </constraints>
-                                <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="54"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUJ-AC-z9S">
-                                <rect key="frame" x="0.0" y="596" width="414" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khn-A9-7uY">
+                                <rect key="frame" x="0.0" y="215" width="414" height="681"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp3-xa-taC">
-                                        <rect key="frame" x="0.0" y="250" width="414" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El3-Xx-Dt3">
+                                        <rect key="frame" x="0.0" y="631" width="414" height="50"/>
                                         <color key="backgroundColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="udr-0H-t6X"/>
+                                            <constraint firstAttribute="height" constant="50" id="FCS-Ri-two"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
                                         <state key="normal" title="CREATE GOAL">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="createGoalBtn:" destination="L0n-Ti-jx6" eventType="touchUpInside" id="szY-UF-Ai7"/>
+                                            <action selector="createGoalBtn:" destination="L0n-Ti-jx6" eventType="touchUpInside" id="H3j-Mp-IZj"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Qe-9O-GKI">
+                                        <rect key="frame" x="157" y="0.0" width="100" height="83.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="ca7-Ef-Bzx"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="54"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="mp3-xa-taC" firstAttribute="leading" secondItem="UUJ-AC-z9S" secondAttribute="leading" id="DlX-J1-tv5"/>
-                                    <constraint firstAttribute="height" constant="300" id="UcJ-dE-Q8e"/>
-                                    <constraint firstAttribute="trailing" secondItem="mp3-xa-taC" secondAttribute="trailing" id="iNs-Se-Y8T"/>
-                                    <constraint firstAttribute="bottom" secondItem="mp3-xa-taC" secondAttribute="bottom" id="kvN-OZ-hp9"/>
+                                    <constraint firstItem="3Qe-9O-GKI" firstAttribute="centerX" secondItem="Khn-A9-7uY" secondAttribute="centerX" id="EeG-du-Iuv"/>
+                                    <constraint firstItem="El3-Xx-Dt3" firstAttribute="leading" secondItem="Khn-A9-7uY" secondAttribute="leading" id="Kcx-KE-FBy"/>
+                                    <constraint firstAttribute="bottom" secondItem="El3-Xx-Dt3" secondAttribute="bottom" id="S1M-9Z-nEe"/>
+                                    <constraint firstAttribute="trailing" secondItem="El3-Xx-Dt3" secondAttribute="trailing" id="ewc-dJ-kIJ"/>
+                                    <constraint firstItem="3Qe-9O-GKI" firstAttribute="top" secondItem="Khn-A9-7uY" secondAttribute="top" id="hj8-XO-Y2a"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7uR-mf-k3R" firstAttribute="top" secondItem="jYt-fV-lDj" secondAttribute="bottom" constant="50" id="56b-qq-IMa"/>
-                            <constraint firstAttribute="bottom" secondItem="UUJ-AC-z9S" secondAttribute="bottom" id="ANF-Q2-Xnk"/>
+                            <constraint firstItem="Khn-A9-7uY" firstAttribute="top" secondItem="7uR-mf-k3R" secondAttribute="bottom" constant="40" id="9KV-yW-0GP"/>
+                            <constraint firstItem="Khn-A9-7uY" firstAttribute="leading" secondItem="E2Q-0T-9xV" secondAttribute="leading" id="Jl7-nu-qSD"/>
                             <constraint firstItem="7uR-mf-k3R" firstAttribute="centerX" secondItem="Ri0-uN-Qae" secondAttribute="centerX" id="OEq-ma-el1"/>
-                            <constraint firstItem="3Qe-9O-GKI" firstAttribute="top" secondItem="7uR-mf-k3R" secondAttribute="bottom" constant="20" id="Wjc-4I-Fnv"/>
                             <constraint firstItem="jYt-fV-lDj" firstAttribute="top" secondItem="Ri0-uN-Qae" secondAttribute="top" id="ZgW-0R-jm1"/>
-                            <constraint firstItem="UUJ-AC-z9S" firstAttribute="trailing" secondItem="Ri0-uN-Qae" secondAttribute="trailing" id="gDp-9B-lQf"/>
+                            <constraint firstItem="Khn-A9-7uY" firstAttribute="trailing" secondItem="E2Q-0T-9xV" secondAttribute="trailing" id="aQ6-Oc-k2D"/>
+                            <constraint firstAttribute="bottom" secondItem="Khn-A9-7uY" secondAttribute="bottom" id="fl2-iL-JfX"/>
                             <constraint firstItem="jYt-fV-lDj" firstAttribute="trailing" secondItem="E2Q-0T-9xV" secondAttribute="trailing" id="ldf-H7-dwS"/>
-                            <constraint firstItem="UUJ-AC-z9S" firstAttribute="leading" secondItem="Ri0-uN-Qae" secondAttribute="leading" id="mTA-Rs-UcA"/>
                             <constraint firstItem="jYt-fV-lDj" firstAttribute="leading" secondItem="E2Q-0T-9xV" secondAttribute="leading" id="os4-9y-vXM"/>
-                            <constraint firstItem="3Qe-9O-GKI" firstAttribute="centerX" secondItem="Ri0-uN-Qae" secondAttribute="centerX" id="yyQ-y8-9IM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E2Q-0T-9xV"/>
                     </view>
                     <connections>
-                        <outlet property="createGoalBtn" destination="mp3-xa-taC" id="RGR-66-OOc"/>
+                        <outlet property="createGoalBtn" destination="El3-Xx-Dt3" id="OPz-P3-IMt"/>
                         <outlet property="pointsTextField" destination="3Qe-9O-GKI" id="onS-qT-nmk"/>
                     </connections>
                 </viewController>
