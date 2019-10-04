@@ -265,7 +265,7 @@
                                             <constraint firstAttribute="width" constant="160" id="qeR-gz-qhQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
-                                        <state key="normal" title="SHORT TERM">
+                                        <state key="normal" title="LONG TERM">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>

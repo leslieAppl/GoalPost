@@ -13,7 +13,7 @@ class GoalsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var goals: [Goal] = []
+    var goalsForTableView: [Goal] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +21,31 @@ class GoalsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        if goals.count > 0 {
-            tableView.isHidden = false
-            
-        }
+        // Fetch Core Data
+        let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
+        goalsForTableView = try! PersistenceServer.context.fetch(fetchRequest)
         
-        // test lines
-//        tableView.isHidden = false
-//        let goal = GoalTest()
-//        goal.goalDesc = "Eat Apple every day"
-//        goal.goalType = GoalType.longTerm.rawValue
-//        goal.goalProgress = Int32(10)
-//
-//        self.goals.append(goal)
+        print("-> GoalsVC.viewDidLoad.goalsForTableView: \(goalsForTableView.count)")
+        if goalsForTableView.count > 0 {
+            self.tableView.isHidden = false
+            self.tableView.reloadData()
+        } else { self.tableView.isHidden = true }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTableView), name: NOTIF_TABLE_VIEW_UPDATED, object: nil)
+    }
+    
+    @objc func updateTableView() {
+        // Fetch Core Data
+               let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
+               goalsForTableView = try! PersistenceServer.context.fetch(fetchRequest)
+               
+               print("-> GoalsVC.viewDidLoad.goalsForTableView: \(goalsForTableView.count)")
+               if goalsForTableView.count > 0 {
+                   self.tableView.isHidden = false
+                   self.tableView.reloadData()
+               } else { self.tableView.isHidden = true }
+        
+        self.tableView.reloadData()
     }
 
     @IBAction func addGoalBtn(_ sender: Any) {
@@ -47,12 +59,12 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return goals.count
+        return goalsForTableView.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GoalCell") as? GoalCell else { return UITableViewCell()}
-        cell.configureCell(goal: goals[indexPath.row])
+        cell.configureCell(goal: goalsForTableView[indexPath.row])
         return cell
     }
 }

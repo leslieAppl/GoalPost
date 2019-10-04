@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0C7B2323472BA9001BFBB8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C7B2223472BA9001BFBB8 /* Constants.swift */; };
 		CE4911EB234597B100118CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4911EA234597B100118CA7 /* AppDelegate.swift */; };
 		CE4911ED234597B100118CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4911EC234597B100118CA7 /* SceneDelegate.swift */; };
 		CE4911EF234597B100118CA7 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4911EE234597B100118CA7 /* GoalsVC.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0C7B2223472BA9001BFBB8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE4911E7234597B100118CA7 /* GoalPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4911EA234597B100118CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4911EC234597B100118CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0C7B2123472B93001BFBB8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C7B2223472BA9001BFBB8 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		CE4911DE234597B100118CA7 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		CE4911E9234597B100118CA7 /* GoalPost */ = {
 			isa = PBXGroup;
 			children = (
+				CE0C7B2123472B93001BFBB8 /* Utilities */,
 				CE4912042345980500118CA7 /* Extensions */,
 				CE491203234597FC00118CA7 /* Enums */,
 				CE4A45702345B92A008BBD41 /* Model */,
@@ -221,6 +232,7 @@
 				CE4911EF234597B100118CA7 /* GoalsVC.swift in Sources */,
 				CE5C5FEA2345ECA300551D7F /* UIButtonExt.swift in Sources */,
 				CE4911EB234597B100118CA7 /* AppDelegate.swift in Sources */,
+				CE0C7B2323472BA9001BFBB8 /* Constants.swift in Sources */,
 				CE4911F5234597B100118CA7 /* GoalPost.xcdatamodeld in Sources */,
 				CE5C5FEC2345F1B600551D7F /* FinishGoalVC.swift in Sources */,
 				CE5C5FE42345E8CB00551D7F /* CreateGoalVC.swift in Sources */,

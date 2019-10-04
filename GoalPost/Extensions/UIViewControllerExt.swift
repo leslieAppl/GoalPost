@@ -10,6 +10,9 @@ import UIKit
 
 extension UIViewController {
     func presentDetail(_ viewController: UIViewController) {
-        
+        guard let presentedVC = presentedViewController else { return }
+        presentedVC.dismiss(animated: true) {
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
 }
