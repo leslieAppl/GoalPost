@@ -27,12 +27,21 @@ class GoalsVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateTableView), name: NOTIF_TABLE_VIEW_UPDATED, object: nil)
     }
     
+    // fetch core data
     func fetchCoreData(completion: (_ completed: Bool) -> ()) {
         // Fetch Core Data
         let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
         goalsForTableView = try! PersistenceServer.context.fetch(fetchRequest)
         print("-> GoalsVC.viewDidLoad.goalsForTableView: \(goalsForTableView.count)")
         completion(true)
+    }
+    
+    // remove core data
+    func removeCoreData(atIndexPath indexPath: IndexPath) {
+        let context = PersistenceServer.context
+        // take the Core data type - Goal's preference into the context.delete() function.
+        context.delete(goalsForTableView[indexPath.row])
+        PersistenceServer.saveContext()
     }
     
     @objc func updateTableView() {
@@ -65,5 +74,28 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GoalCell") as? GoalCell else { return UITableViewCell()}
         cell.configureCell(goal: goalsForTableView[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+            self.removeCoreData(atIndexPath: indexPath)
+            self.fetchCoreData { (completed) in
+                if completed {
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+            }
+        }
+
+        deleteAction.backgroundColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
+
+        return [deleteAction]
     }
 }
