@@ -141,6 +141,23 @@
                                                     <color key="textColor" red="0.69803921570000005" green="0.86666666670000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" id="cRu-66-6Nq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL COMPLETE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZD-mV-6F7">
+                                                            <rect key="frame" x="79" y="19.5" width="256" height="41"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                                            <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.91764705882352937" green="0.66274509803921566" blue="0.26666666666666666" alpha="0.75" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kZD-mV-6F7" firstAttribute="centerY" secondItem="cRu-66-6Nq" secondAttribute="centerY" id="KHo-OY-Ex3"/>
+                                                        <constraint firstItem="kZD-mV-6F7" firstAttribute="centerX" secondItem="cRu-66-6Nq" secondAttribute="centerX" id="x1y-pa-8I8"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="43x-am-t1p" firstAttribute="top" secondItem="OMF-TT-RJ4" secondAttribute="topMargin" constant="4" id="7yh-8E-e7b"/>
@@ -151,6 +168,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completiongView" destination="cRu-66-6Nq" id="YFh-6h-Rad"/>
                                             <outlet property="goalDescLbe" destination="tNv-Y7-mt1" id="Mfe-PB-ngm"/>
                                             <outlet property="goalProgressLbl" destination="bEK-Mt-hSA" id="Upm-i6-fxP"/>
                                             <outlet property="goalTypeLbl" destination="bgh-bw-QH2" id="mze-US-0N7"/>

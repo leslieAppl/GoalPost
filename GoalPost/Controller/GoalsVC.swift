@@ -27,18 +27,27 @@ class GoalsVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateTableView), name: NOTIF_TABLE_VIEW_UPDATED, object: nil)
     }
     
+    func setProgress(atIndexPath indexPath: IndexPath) {
+        let chosenGoal = self.goalsForTableView[indexPath.row]
+        if chosenGoal.goalProgress > 0 {
+            chosenGoal.goalProgress -= 1
+        } else { return }
+        PersistenceServer.saveContext()
+    }
+    
     // fetch core data
     func fetchCoreData(completion: (_ completed: Bool) -> ()) {
         // Fetch Core Data
         let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
         goalsForTableView = try! PersistenceServer.context.fetch(fetchRequest)
-        print("-> GoalsVC.viewDidLoad.goalsForTableView: \(goalsForTableView.count)")
+        print(">> GoalsVC.viewDidLoad.goalsForTableView: \(goalsForTableView.count)")
         completion(true)
     }
     
     // remove core data
     func removeCoreData(atIndexPath indexPath: IndexPath) {
         let context = PersistenceServer.context
+        print(">> GoalsVC.removeCoreData.context: \(context)")
         // take the Core data type - Goal's preference into the context.delete() function.
         context.delete(goalsForTableView[indexPath.row])
         PersistenceServer.saveContext()
@@ -89,13 +98,25 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
             self.removeCoreData(atIndexPath: indexPath)
             self.fetchCoreData { (completed) in
                 if completed {
+                    // deleteRows() action is individual from the fetchCoreData() action.
+                    // One is for deleting one row of the tableView, the other is for deleting a Core Data record. They just share the one Selected IndexPath to do their own stuff!
                     tableView.deleteRows(at: [indexPath], with: .automatic)
+                    if self.goalsForTableView.count ==
+                        0 {
+                        self.tableView.isHidden = true
+                    }
                 }
             }
         }
+        
+        let countProgressAction = UITableViewRowAction(style: .normal, title: "+1 Point") { (rowAction, indexPath) in
+            self.setProgress(atIndexPath: indexPath)
+            // just reload one row's data, not the whole tableView.
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
 
         deleteAction.backgroundColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
-
-        return [deleteAction]
+        countProgressAction.backgroundColor = #colorLiteral(red: 0.9385011792, green: 0.7164435983, blue: 0.3331357837, alpha: 0.75)
+        return [deleteAction, countProgressAction]
     }
 }
