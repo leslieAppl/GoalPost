@@ -40,7 +40,7 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
         let goalsVC = GoalsVC()
         goalsVC.goalsForTableView.append(goal)
         print("-> FinishGoalVC.createGoalBtn.goalsForTableView.append(goal).goalsForTableView.count: \(goalsVC.goalsForTableView.count)")
-        // Step 3: Post message to NotificationCenter -> After the Observer received the message, it will run the specified function to Update the tableView.
+        // Step 3: Post message to NotificationCenter -> After the Observer have received the message, it will run the specified function to Update the tableView.
         NotificationCenter.default.post(name: NOTIF_TABLE_VIEW_UPDATED, object: nil)
         // Step 4: Dismiss FinishGoalVC
         self.dismiss(animated: true, completion: nil)
